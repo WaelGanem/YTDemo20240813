@@ -75,8 +75,8 @@ const Card = styled.div`
     left: 0; /* Position text at the left */
     width: 100%; /* Full width of the card */
     padding: 1rem; /* Add padding for spacing */
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
-    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    color: #fff;
     text-align: center;
     font-weight: 600;
     font-size: 1rem;

@@ -2,6 +2,7 @@ import React, { useEffect, useState }  from 'react'
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 import '@splidejs/react-splide/css'
 import {Wrapper, Card, Gradient} from './Popular.jsx'
+import { Link } from 'react-router-dom';
 
 function Veggie() {
 
@@ -52,12 +53,14 @@ function Veggie() {
             }}
         >
         {veggie.map((recipe) => (
-            <SplideSlide>
-          <Card key={recipe.id}>
-            <p>{recipe.title}</p>
-            <img src={recipe.image} alt={recipe.title} />
-            <Gradient />
-          </Card>
+          <SplideSlide>
+            <Card key={recipe.id}>
+              <Link to={'../recipe/' +recipe.id} >
+                <p>{recipe.title}</p>
+                <img src={recipe.image} alt={recipe.title} />
+                <Gradient />
+              </Link>
+            </Card>
           </SplideSlide>
         ))}
         </Splide>

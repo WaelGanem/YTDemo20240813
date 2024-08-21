@@ -19,7 +19,7 @@ function Cuisine() {
     useEffect(() => {
         getCuisine(params.type);
         console.log(params);
-    }, [params.type])
+    }, [params])
 
     return (
         <Grid
@@ -33,7 +33,7 @@ function Cuisine() {
                 return (
                     <Card key={item.id}>
                         <Link to={'/recipe/' + item.id}>
-                            <img src={item.image} />
+                            <img src={item.image} alt={item.title}/>
                             <h4>{item.title}</h4>
                         </Link>
                     </Card>

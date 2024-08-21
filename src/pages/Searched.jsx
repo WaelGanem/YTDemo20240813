@@ -26,7 +26,7 @@ function Searched() {
             return(
             <Link to={'/recipe/' +item.id}>
                 <Card key={item.id}>
-                    <img src={item.image} />
+                    <img src={item.image} alt={item.title} />
                     <h4>{item.tittle}</h4>
                 </Card>
             </Link>
